@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ReshSettings.Discover</id>
+    <version>$version$</version>
+    <title>ReSharper Solution Settings Autodiscovery</title>
+    <authors>hypersw, awelburn</authors>
+    <owners>hypersw, awelburn</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>When you open a solution in Visual Studio, this plugin looks for any *.AutoLoad.DotSettings files in parent folders and loads them as ReSharper settings layers. This allows to apply a root settings file to all solutions in the same source control.</description>
+    <releaseNotes>ReSharper 9.0 compatibility</releaseNotes>
+    <dependencies>
+      <dependency id="Wave" version="[1.0]" />
+    </dependencies>
+    <tags>Settings</tags>
+  </metadata>
+  <files>
+    <file src="bin\$Configuration$\ReshSettingsDiscover.dll" target="dotFiles" />
+  </files>
+</package>

@@ -1,6 +1,0 @@
-syntax: regexp
-^Lib
-^(bin|obj)/
-\.suo$
-\.cache$
-\.user$
