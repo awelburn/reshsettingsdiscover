@@ -1,8 +1,5 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
-using JetBrains.Application.PluginSupport;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -36,7 +33,3 @@ using JetBrains.Application.PluginSupport;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-
-[assembly:PluginTitle("ReSharper Solution Settings Autodiscovery")]
-[assembly:PluginDescription("When you open a solution in Visual Studio, this plugin looks for any *.AutoLoad.DotSettings files in parent folders and loads them as ReSharper settings layers. This allows to apply a root settings file to all solutions in the same source control.")]
-[assembly:PluginVendor("hypersw")]
