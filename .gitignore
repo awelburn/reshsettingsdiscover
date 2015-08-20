@@ -4,3 +4,5 @@
 *.nupkg
 *.suo
 *.user
+/app.config
+/package.bat
