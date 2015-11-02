@@ -46,7 +46,7 @@ namespace ReshSettingsDiscover
                             var storage = new XmlFileSettingsStorage(lifetimeLocation, name, livepath, SettingsStoreSerializationToXmlDiskFile.SavingEmptyContent.KeepFile, threading, filetracker, behavior, null);
 
                             // Mount as a layer
-                            IIsAvailable availability = new IsAvailableByDataConstant<ISolution>(lifetimeLocation, DataConstants.SOLUTION, solution, locks); // Only when querying in solution context (includes Application-Wide)
+                            IIsAvailable availability = new IsAvailableByDataConstant<ISolution>(lifetimeLocation, ProjectModelDataConstants.SOLUTION, solution, locks); // Only when querying in solution context (includes Application-Wide)
                             ISettingsStorageMountPoint mount = new SettingsStorageMountPoint(storage.Storage, SettingsStorageMountPoint.MountPath.Default, 0, priority, availability, name);
 
                             // Metadata
