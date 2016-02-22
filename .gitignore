@@ -6,3 +6,4 @@
 *.user
 /app.config
 /package.bat
+/_ReSharper.Caches
