@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>ReshSettings.Discover</id>
-        <version>2.4.0-beta</version>
+        <version>2.4.0</version>
         <title>ReSharper Solution Settings Autodiscovery</title>
         <authors>hypersw,awelburn</authors>
         <owners>hypersw,awelburn</owners>
