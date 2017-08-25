@@ -1,17 +1,15 @@
 ﻿using System;
-
-using JetBrains.Application;
 using JetBrains.Application.FileSystemTracker;
 using JetBrains.Application.Settings;
-using JetBrains.Application.Settings.Storage;
+using JetBrains.Application.Settings.Implementation;
+using JetBrains.Application.Settings.Storage.DefaultBody;
 using JetBrains.Application.Settings.Storage.Persistence;
-using JetBrains.Application.Settings.Store.Implementation;
 using JetBrains.Application.Settings.UserInterface;
+using JetBrains.Application.Threading;
 using JetBrains.DataFlow;
 using JetBrains.ProjectModel;
 using JetBrains.ProjectModel.DataContext;
 using JetBrains.ProjectModel.Settings.Storages;
-using JetBrains.Threading;
 using JetBrains.Util;
 using JetBrains.Util.Logging;
 

@@ -4,7 +4,7 @@ using JetBrains.ProjectModel;
 namespace ReshSettingsDiscover
 {
     [ZoneMarker]
-    public class ZoneMarker : IZone, IRequire<IProjectModelZone>
+    public class ZoneMarker : IRequire<IProjectModelZone>
     {
     }
 }
