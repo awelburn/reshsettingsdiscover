@@ -9,7 +9,10 @@
       <None Remove="ReshSettingsDiscover.nuspec" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="JetBrains.ReSharper.SDK" Version="2018.3.0" />
+      <PackageReference Include="JetBrains.ReSharper.SDK" Version="2019.1.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <Reference Include="PresentationCore" />

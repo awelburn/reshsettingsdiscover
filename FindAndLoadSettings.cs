@@ -7,6 +7,7 @@ using JetBrains.Application.Settings.Storage.Persistence;
 using JetBrains.Application.Settings.UserInterface;
 using JetBrains.Application.Threading;
 using JetBrains.DataFlow;
+using JetBrains.Lifetimes;
 using JetBrains.ProjectModel;
 using JetBrains.ProjectModel.DataContext;
 using JetBrains.ProjectModel.Settings.Storages;
