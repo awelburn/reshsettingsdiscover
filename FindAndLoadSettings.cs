@@ -27,7 +27,7 @@ namespace ReshSettingsDiscover
             solfile.SolutionFileLocation.ForEachValue_NotNull(lifetimeComponent, (lifetimeLocation, location) =>
             {
                 double priority = ProjectModelSettingsStorageMountPointPriorityClasses.SolutionShared;
-                for(FileSystemPath dir = location.Directory; !dir.IsNullOrEmpty(); dir = dir.Directory)
+                for(VirtualFileSystemPath dir = location.Directory; !dir.IsNullOrEmpty(); dir = dir.Directory)
                 {
                     try
                     {
@@ -35,13 +35,14 @@ namespace ReshSettingsDiscover
 
                         // Walk up folders
                         // TODO: add file-system-watcher here
-                        foreach(FileSystemPath settingsfile in dir.GetChildFiles("*." + AutoLoadExtension, PathSearchFlags.ExcludeDirectories | PathSearchFlags.ExcludeHidden))
+                        foreach(VirtualFileSystemPath settingsfile in dir.GetChildFiles("*." + AutoLoadExtension, PathSearchFlags.ExcludeDirectories | PathSearchFlags.ExcludeHidden))
                         {
                             var relativePath = settingsfile.MakeRelativeTo(location.Directory).FullPath;
                             var name = relativePath.Replace("." + AutoLoadExtension, "");
 
                             // Physical storage
-                            IProperty<FileSystemPath> livepath = new Property<FileSystemPath>(lifetimeLocation, "StoragePath", settingsfile);
+                            var fsSettingsfile = FileSystemPath.Parse(settingsfile.FullPath);
+                            IProperty<FileSystemPath> livepath = new Property<FileSystemPath>(lifetimeLocation, "StoragePath", fsSettingsfile);
                             var storage = new XmlFileSettingsStorage(lifetimeLocation, name, livepath, SettingsStoreSerializationToXmlDiskFile.SavingEmptyContent.KeepFile, threading, filetracker, behavior, null);
 
                             // Mount as a layer
