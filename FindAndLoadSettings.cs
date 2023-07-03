@@ -42,7 +42,7 @@ namespace ReshSettingsDiscover
 
                             // Physical storage
                             var fsSettingsfile = FileSystemPath.Parse(settingsfile.FullPath);
-                            IProperty<FileSystemPath> livepath = new Property<FileSystemPath>(lifetimeLocation, "StoragePath", fsSettingsfile);
+                            IProperty<FileSystemPath> livepath = new Property<FileSystemPath>("StoragePath", fsSettingsfile);
                             var storage = new XmlFileSettingsStorage(lifetimeLocation, name, livepath, SettingsStoreSerializationToXmlDiskFile.SavingEmptyContent.KeepFile, threading, filetracker, behavior, null);
 
                             // Mount as a layer

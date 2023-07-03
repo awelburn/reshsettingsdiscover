@@ -13,10 +13,10 @@
         <projectUrl>https://github.com/Artesian/reshsettingsdiscover</projectUrl>
         <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
         <dependencies>
-            <dependency id="Wave" version="[231.0.0]" />
+            <dependency id="Wave" version="231.0.0"/>
         </dependencies>
     </metadata>
     <files>
-    <file src="bin\Release\net472\ReshSettingsDiscover.dll" target="dotFiles" />
+        <file src="bin\Release\net472\ReshSettingsDiscover.dll" target="dotFiles"/>
     </files>
 </package>
