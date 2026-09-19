@@ -5,6 +5,6 @@
 *.suo
 *.user
 /app.config
-/package.bat
+/package.cmd
 /_ReSharper.Caches
 .vs
